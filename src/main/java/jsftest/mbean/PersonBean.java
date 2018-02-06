@@ -6,7 +6,6 @@
 package jsftest.mbean;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -27,8 +26,6 @@ public class PersonBean implements Serializable {
     @Inject
     PersonSession session;
     
-    private List<Person> persons;
-    
     private Person person;
 
     public PersonBean() {
@@ -44,20 +41,6 @@ public class PersonBean implements Serializable {
         }
     }
     
-    /**
-     * @return the persons
-     */
-    public List<Person> getPersons() {
-        return persons;
-    }
-
-    /**
-     * @param persons the persons to set
-     */
-    public void setPersons(List<Person> persons) {
-        this.persons = persons;
-    }
-
     /**
      * @return the person
      */
